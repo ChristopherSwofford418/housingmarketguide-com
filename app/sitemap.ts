@@ -1,11 +1,14 @@
-import { MetadataRoute } from "next";
+import { MetadataRoute } from 'next'
+ 
 export default function sitemap(): MetadataRoute.Sitemap {
+  const baseUrl = 'https://housingmarketguide.com'
   return [
-    { url: "https://housingmarketguide.com/", lastModified: new Date(), changeFrequency: "weekly" as const, priority: 1.0 },
-    { url: "https://housingmarketguide.com/calculator/", lastModified: new Date(), changeFrequency: "monthly" as const, priority: 0.9 },
-    { url: "https://housingmarketguide.com/learn/housing-market-trends-2025/", lastModified: new Date(), changeFrequency: "monthly" as const, priority: 0.8 },
-    { url: "https://housingmarketguide.com/learn/best-cities-to-buy-a-home/", lastModified: new Date(), changeFrequency: "monthly" as const, priority: 0.8 },
-    { url: "https://housingmarketguide.com/learn/when-will-housing-market-crash/", lastModified: new Date(), changeFrequency: "monthly" as const, priority: 0.8 },
-    { url: "https://housingmarketguide.com/about/", lastModified: new Date(), changeFrequency: "yearly" as const, priority: 0.5 },
-  ];
+    { url: baseUrl, lastModified: new Date(), changeFrequency: 'weekly', priority: 1 },
+    { url: `${baseUrl}/about`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${baseUrl}/contact`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${baseUrl}/privacy`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.5 },
+    { url: `${baseUrl}/terms`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.5 },
+    { url: `${baseUrl}/disclaimer`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.5 },
+    { url: `${baseUrl}/methodology`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
+  ]
 }

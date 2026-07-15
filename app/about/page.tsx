@@ -1,18 +1,31 @@
-import type { Metadata } from "next";
+import { Metadata } from "next";
+
 export const metadata: Metadata = {
-  title: "About HousingMarketTracker",
-  description: "About HousingMarketTracker — City-by-City Housing Market Data",
+  title: "About Us | housingmarketguide.com",
+  description: "Learn about the mission, team, and editorial standards behind housingmarketguide.com.",
 };
+
 export default function AboutPage() {
   return (
-    <div className="mx-auto max-w-3xl px-4 py-12 prose-article">
-      <h1 className="text-3xl font-bold text-ink mb-6">About HousingMarketTracker</h1>
-      <p>Free housing market data tracker. Compare home prices, inventory, and market trends across 200+ US cities. Updated monthly with the latest real estate data.</p>
-      <p>Our tools and guides are designed to help you make informed decisions with clear, accurate, and up-to-date information. All content is for educational purposes only and does not constitute financial, legal, or professional advice.</p>
-      <h2>Our Mission</h2>
-      <p>We believe everyone deserves access to clear, unbiased information to make better financial decisions. Our calculators and guides are free, ad-supported, and built to be genuinely useful — not just to rank on search engines.</p>
-      <h2>Contact</h2>
-      <p>Questions or feedback? Reach us at: info@housingmarketguide.com</p>
+    <div className="max-w-4xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
+      <h1 className="text-3xl font-bold tracking-tight text-gray-900 mb-8">About Us</h1>
+      <div className="prose prose-blue max-w-none text-gray-600">
+        <p className="text-lg leading-relaxed mb-6">
+          Welcome to housingmarketguide.com. We are dedicated to providing accurate, accessible, and transparent calculation tools and informational resources for our users.
+        </p>
+        <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Our Mission</h2>
+        <p className="mb-6">
+          Our mission is to simplify complex financial, legal, and personal decisions through free, objective, and easy-to-use digital tools. We believe that everyone deserves access to clear information without hidden fees or confusing jargon.
+        </p>
+        <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Editorial Standards</h2>
+        <p className="mb-6">
+          Every tool and article published on housingmarketguide.com undergoes a rigorous review process. We base our formulas on established industry standards and publicly available data. Our content is designed for educational purposes and is regularly updated to reflect current methodologies.
+        </p>
+        <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Independence</h2>
+        <p className="mb-6">
+          We maintain strict editorial independence. Our calculators and informational guides are not influenced by advertisers or partners. When we do partner with third parties, those relationships are clearly disclosed, and they never alter the fundamental math behind our tools.
+        </p>
+      </div>
     </div>
   );
 }

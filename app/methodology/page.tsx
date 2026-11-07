@@ -1,41 +1,25 @@
-import { Metadata } from "next";
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Methodology & Sources | housingmarketguide.com",
-  description: "Learn how housingmarketguide.com calculates estimates and the data sources we rely on.",
+  title: "Methodology & Sources",
+  description: "Sources and limitations for the housing research guides.",
+  alternates: { canonical: "https://housingmarketguide.com/methodology/" },
+  openGraph: { url: "https://housingmarketguide.com/methodology/" },
 };
 
 export default function MethodologyPage() {
   return (
-    <div className="max-w-4xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
-      <h1 className="text-3xl font-bold tracking-tight text-gray-900 mb-8">Methodology & Sources</h1>
-      <div className="prose prose-blue max-w-none text-gray-600">
-        <p className="text-lg leading-relaxed mb-6">
-          Transparency is a core value at housingmarketguide.com. We want you to understand exactly how our tools generate their estimates and where the underlying data comes from.
-        </p>
-        
-        <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">How We Calculate</h2>
-        <p className="mb-6">
-          Our calculators use deterministic mathematical models based on established industry practices. We do not use "black box" algorithms or opaque AI models to generate financial or legal estimates. When you input a value, the calculator applies a fixed formula (such as standard amortization for loans, or typical multiplier ranges for settlements) to produce the output.
-        </p>
-        <p className="mb-6">
-          Where ranges are provided, we typically calculate a conservative "low" estimate and a standard "high" estimate to reflect the natural variance in real-world scenarios.
-        </p>
-
-        <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Data Sourcing</h2>
-        <p className="mb-4">Our baseline assumptions, default values, and reference points are drawn from publicly available, authoritative sources, including:</p>
-        <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li>Federal and state government publications (e.g., IRS, SSA, BLS)</li>
-          <li>Academic research and peer-reviewed studies</li>
-          <li>Aggregated public legal settlement data</li>
-          <li>Industry association reports and guidelines</li>
-        </ul>
-
-        <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Editorial Review</h2>
-        <p className="mb-6">
-          Before a new calculator is published, its formulas are manually tested against known case studies or established reference points to ensure mathematical accuracy. We periodically review our tools to ensure they remain aligned with current laws, tax brackets, and market conditions.
-        </p>
-      </div>
-    </div>
+    <article className="max-w-4xl mx-auto px-4 py-12 prose-article">
+      <h1 className="text-3xl font-bold text-ink">Methodology &amp; Sources</h1>
+      <p className="mt-6">The housing guides explain how to locate and interpret public information. The former city selector was removed because its figures lacked a documented source and reporting period. This site does not currently calculate city market ratings or publish a live city dataset.</p>
+      <h2>Federal Housing Finance Agency</h2>
+      <p>The <a href="https://www.fhfa.gov/data/hpi">FHFA House Price Index</a> measures changes in single-family prices using repeat transactions. Different index series cover different transactions and areas. Consult the <a href="https://www.fhfa.gov/faqs/hpi">FHFA methodology and coverage explanations</a> before comparing series. An index is not a median sale price or individual home valuation.</p>
+      <h2>U.S. Census Bureau</h2>
+      <p><a href="https://www.census.gov/quickfacts/">QuickFacts</a> provides housing and income estimates for states, counties, and many cities. Read the estimate years and source notes. Survey estimates have sampling error; median owner-occupied home value is not a median sale price.</p>
+      <h2>Consumer Financial Protection Bureau</h2>
+      <p>The <a href="https://www.consumerfinance.gov/owning-a-home/loan-estimate/">Loan Estimate explainer</a> describes the costs and terms on a lender&apos;s estimate. Actual loan terms and ownership costs depend on the property and borrower.</p>
+      <h2>Comparing sources</h2>
+      <p>Check each dataset&apos;s reporting period, geography, property coverage, definition, and revisions. Sources are not necessarily directly comparable. External pages may update independently; this site does not assert a data-refresh schedule.</p>
+    </article>
   );
 }

@@ -3,6 +3,8 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Contact Us | housingmarketguide.com",
   description: "Get in touch with the housingmarketguide.com team for support, feedback, or inquiries.",
+  alternates: { canonical: "https://housingmarketguide.com/contact/" },
+  openGraph: { url: "https://housingmarketguide.com/contact/" },
 };
 
 export default function ContactPage() {

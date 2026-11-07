@@ -3,6 +3,8 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Privacy Policy | housingmarketguide.com",
   description: "Read the housingmarketguide.com privacy policy to understand how we collect, use, and protect your data.",
+  alternates: { canonical: "https://housingmarketguide.com/privacy/" },
+  openGraph: { url: "https://housingmarketguide.com/privacy/" },
 };
 
 export default function PrivacyPage() {

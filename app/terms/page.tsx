@@ -3,6 +3,8 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Terms of Service | housingmarketguide.com",
   description: "Review the terms and conditions for using housingmarketguide.com and its tools.",
+  alternates: { canonical: "https://housingmarketguide.com/terms/" },
+  openGraph: { url: "https://housingmarketguide.com/terms/" },
 };
 
 export default function TermsPage() {
